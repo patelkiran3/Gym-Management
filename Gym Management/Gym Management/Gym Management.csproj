@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF1DE603-6752-41F2-9C42-BB7BF8122CE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gym_Management</RootNamespace>
+    <AssemblyName>Gym Management</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AttendenceBLL.cs" />
+    <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\Package_EntryBLL.cs" />
+    <Compile Include="BLL\Payment_EntryBLL.cs" />
+    <Compile Include="BLL\Shift_EntryBLL.cs" />
+    <Compile Include="BLL\SignUp.cs" />
+    <Compile Include="BLL\Trainer_RegistrationBLL.cs" />
+    <Compile Include="BLL\User_RegistrationBLL.cs" />
+    <Compile Include="Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\AttendenceDal.cs" />
+    <Compile Include="DAL\LoginDal.cs" />
+    <Compile Include="DAL\Package_EntryDal.cs" />
+    <Compile Include="DAL\Payment_EntryDal.cs" />
+    <Compile Include="DAL\Shift_EntryDal.cs" />
+    <Compile Include="DAL\SignUpDal.cs" />
+    <Compile Include="DAL\Trainer_RegistrationDal.cs" />
+    <Compile Include="DAL\User_RegistrationDal.cs" />
+    <Compile Include="Reports\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\AttendenceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AttendenceReport.Designer.cs">
+      <DependentUpon>AttendenceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Attendence_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Attendence_Form.Designer.cs">
+      <DependentUpon>Attendence_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Change_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Change_Password.Designer.cs">
+      <DependentUpon>Change_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PackageDetailsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PackageDetailsReport.Designer.cs">
+      <DependentUpon>PackageDetailsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Package_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Package_Entry.Designer.cs">
+      <DependentUpon>Package_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\PaymentDetailsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PaymentDetailsReport.Designer.cs">
+      <DependentUpon>PaymentDetailsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Payment_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Payment_Entry.Designer.cs">
+      <DependentUpon>Payment_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShiftDetailsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ShiftDetailsReport.Designer.cs">
+      <DependentUpon>ShiftDetailsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Shift_Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Shift_Entry.Designer.cs">
+      <DependentUpon>Shift_Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SIgnUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SIgnUp.Designer.cs">
+      <DependentUpon>SIgnUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TrainerDetailsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TrainerDetailsReport.Designer.cs">
+      <DependentUpon>TrainerDetailsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Trainer_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Trainer_Registration.Designer.cs">
+      <DependentUpon>Trainer_Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserDetailsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserDetailsReport.Designer.cs">
+      <DependentUpon>UserDetailsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User_Registration.Designer.cs">
+      <DependentUpon>User_Registration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport6.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AttendenceReport.resx">
+      <DependentUpon>AttendenceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Attendence_Form.resx">
+      <DependentUpon>Attendence_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Change_Password.resx">
+      <DependentUpon>Change_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PackageDetailsReport.resx">
+      <DependentUpon>PackageDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Package_Entry.resx">
+      <DependentUpon>Package_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\PaymentDetailsReport.resx">
+      <DependentUpon>PaymentDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Payment_Entry.resx">
+      <DependentUpon>Payment_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ShiftDetailsReport.resx">
+      <DependentUpon>ShiftDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Shift_Entry.resx">
+      <DependentUpon>Shift_Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SIgnUp.resx">
+      <DependentUpon>SIgnUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TrainerDetailsReport.resx">
+      <DependentUpon>TrainerDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Trainer_Registration.resx">
+      <DependentUpon>Trainer_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserDetailsReport.resx">
+      <DependentUpon>UserDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User_Registration.resx">
+      <DependentUpon>User_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
